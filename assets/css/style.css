@@ -239,6 +239,7 @@
       .p-slide__p {
          font-size: 16px;
          line-height: 32px;
+         text-align: justify;
       }
 
       .p-slide__p > br {

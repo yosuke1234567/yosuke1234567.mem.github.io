@@ -202,8 +202,8 @@
    }
 
    .p-slide__btn {
-      -webkit-appearance: none;
       border: 0;
+      padding: 0;
       background-color: #e5e5e5;
       border-radius: 50%;
       height: 20px;

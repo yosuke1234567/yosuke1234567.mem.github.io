@@ -809,7 +809,7 @@
       border: 1px solid #707070;
       padding: 96px 0;
       width: 1000px;
-      max-width: 90%;
+      max-width: 98%;
       right: 50%;
       transform: translateX(50%);
    }
@@ -854,13 +854,16 @@
    }
 
    .p-form__section1 > label {
-      width: 85%;
+      font-size: 24px;
+      width: 850px;
+      max-width: 90%;
       margin: 0 auto 16px;
    }
 
    .p-form__section1 > input, .p-form__section1 > textarea {
       box-sizing: border-box;
-      width: 85%;
+      width: 850px;
+      max-width: 90%;
       border-radius: 0;
       border: 1px solid #e5e5e5;
       padding: 24px;
@@ -884,17 +887,14 @@
       height: 250px;
    }
 
-   .p-form__section1 > label {
-      font-size: 24px;
-   }
-
    .p-form__submit1 {
       background-color: #d7003a;
       color: #fff;
       font-size: 32px;
       font-weight: bold;
       height: 95px;
-      width: 85%;
+      width: 850px;
+      max-width: 90%;
       margin: 24px auto 0;
    }
 
@@ -905,13 +905,20 @@
       font-weight: bold;
       height: 95px;
       width: 480px;
-      max-width: 85%;
+      max-width: 90%;
       margin: 0 auto;
    }
 
    .p-form__section2 > p {
+      font-size: 24px;
+      width: 850px;
+      max-width: 90%;
       margin: -24px auto 48px;
       text-align: center;
+   }
+
+   .p-form__2 {
+      padding: 192px 0;
    }
 
    .p-form__wrap[aria-hidden="true"],
@@ -921,8 +928,40 @@
    }
 
    @media screen and (max-width: 699px) {
-      .p-contact__btn, .p-form__submit1, .p-form__submit2 {
-         font-size: 16px;
+      .p-contact__btn {
+         font-size: 18px;
          height: 80px;
+      }
+
+      .p-form {
+         padding: 64px 0;
+      }
+
+      .p-form__closebtn {
+         right: 24px;
+         top: 24px;
+      }
+
+      .p-form > h2 {
+         font-size: 24px;
+         margin-bottom: 24px;
+      }
+      
+      .p-form__section1 > label {
+         font-size: 18px;
+      }
+
+      .p-form__section1 > input, .p-form__section1 > textarea {
+         padding: 16px;
+      }
+
+      .p-form__submit1, .p-form__submit2 {
+         height: 70px;
+         font-size: 18px;
+      }
+
+      .p-form__section2 > p {
+         font-size: 18px;
+         margin: 0 auto 40px;
       }
    }

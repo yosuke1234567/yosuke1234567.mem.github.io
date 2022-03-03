@@ -22,6 +22,7 @@ formSubmit1.addEventListener('click', function() {
    formSection1.setAttribute('aria-hidden', 'true');
    formSection2.setAttribute('aria-hidden', 'false');
    formCaption.textContent = '送信が完了しました';
+   form.classList.add('p-form__2');
 });
 
 formWrap.addEventListener('click', function(e) {
@@ -29,6 +30,7 @@ formWrap.addEventListener('click', function(e) {
       formWrap.setAttribute('aria-hidden', 'true');
       formSection1.setAttribute('aria-hidden', 'true');
       formSection2.setAttribute('aria-hidden', 'true');
+      form.classList.remove('p-form__2');
    }
 });
 

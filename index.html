@@ -16,36 +16,97 @@
       <link rel="stylesheet" href="./assets/css/style.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@500;700&family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
    </head>
    <body>
       <header>
          <div class="header">
-            <h1 class="c-header__logo">
-               <a href="">
-                  <img class="c-header__img" src="./assets/images/logo.png" alt="メンバーズキャリア">
-               </a>
-            </h1>
-            <nav class="c-nav">
-               <ul class="c-nav__ul">
-                  <li><a class="c-nav__a" href="">COMPANY</a></li>
-                  <li><a class="c-nav__a" href="">NEWS</a></li>
-                  <li><a class="c-nav__a" href="">FAQ</a></li>
-                  <li><a class="c-nav__a" href="">RECRUIT</a></li>
-               </ul>
-            </nav>
-            <div class="c-header__hamb">
-               <span></span>
-               <span></span>
-               <span></span>
+            <div class="p-header__wrap">
+               <h1 class="p-header__logo">
+                  <a href="">
+                     <img class="p-header__img" src="./assets/images/logo.png" alt="メンバーズキャリア">
+                  </a>
+               </h1>
+               <nav class="p-nav">
+                  <ul class="p-nav__ul">
+                     <li class="p-nav__li">
+                        <a class="p-nav__a" href="">COMPANY</a>
+                        <div class="p-drawer" aria-hidden="true">
+                           <div class="p-drawer__inner">
+                              <ul class="p-drawer__ul">
+                                 <li><a class="p-drawer__a" href="">company</a></li>
+                                 <li><a class="p-drawer__a" href="">company</a></li>
+                                 <li><a class="p-drawer__a" href="">company</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="p-nav__li">
+                        <a class="p-nav__a" href="">NEWS</a>
+                        <div class="p-drawer" aria-hidden="true">
+                           <div class="p-drawer__inner">
+                              <ul class="p-drawer__ul">
+                                 <li><a class="p-drawer__a" href="">news</a></li>
+                                 <li><a class="p-drawer__a" href="">news</a></li>
+                                 <li><a class="p-drawer__a" href="">news</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="p-nav__li">
+                        <a class="p-nav__a" href="">FAQ</a>
+                        <div class="p-drawer" aria-hidden="true">
+                           <div class="p-drawer__inner">
+                              <ul class="p-drawer__ul">
+                                 <li><a class="p-drawer__a" href="">faq</a></li>
+                                 <li><a class="p-drawer__a" href="">faq</a></li>
+                                 <li><a class="p-drawer__a" href="">faq</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="p-nav__li">
+                        <a class="p-nav__a" href="">RECRUIT</a>
+                        <div class="p-drawer" aria-hidden="true">
+                           <div class="p-drawer__inner">
+                              <ul class="p-drawer__ul">
+                                 <li><a class="p-drawer__a" href="">recruit</a></li>
+                                 <li><a class="p-drawer__a" href="">recruit</a></li>
+                                 <li><a class="p-drawer__a" href="">recruit</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </nav>
+               <div class="p-hamburger__btn" id="hamburger-btn" aria-expanded="false">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+               <div class="p-hamburger__wrap" id="hamburger-wrap" aria-hidden="true">
+                  <ul class="p-hamburger__ul">
+                     <li><a class="p-hamburger__a" href="">COMPANY</a></li>
+                     <li><a class="p-hamburger__a" href="">NEWS</a></li>
+                     <li><a class="p-hamburger__a" href="">FAQ</a></li>
+                     <li><a class="p-hamburger__a" href="">RECRUIT</a></li>
+                  </ul>
+               </div>
             </div>
          </div>
       </header>
 
-      <div class="p-slide">
+      <div class="video" id="video-container" aria-hidden="false">
+         <div class="p-video__inner">
+            <p class="p-video__p">ひとりでも多くの「優秀なデジタルクリエイター」と<br>「優秀でありたいデジタルクリエイター」を輩出し、<br>持続可能な社会に向けたデジタルイノベーション創造を「人の力」で支える。</p>
+            <div class="p-video__btn" id="video-close-btn"></div>
+         </div>
+         <div class="p-video__wrap">
+            <video id="video" src="./assets/images/modal.mp4" muted autoplay playsinline loop poster="./assets/images/slide_1.jpg"></video>
+         </div>
+      </div>
+
+      <div class="slide">
          <div class="p-slide__cover">
             <p class="p-slide__p">ひとりでも多くの「優秀なデジタルクリエイター」と<br>「優秀でありたいデジタルクリエイター」を輩出し、<br>持続可能な社会に向けたデジタルイノベーション創造を「人の力」で支える。</p>
             <ul class="p-slide__ul">
@@ -61,10 +122,140 @@
          </div>
       </div>
 
+      <section class="about">
+         <h2>ABOUT</h2>
+         <p class="p-about__p">ひとりでも多くの「優秀なデジタルクリエイター」を輩出し、持続可能な社会に向けたデジタルイノベーションの創造を「人の力」で支えることをミッションに掲げ、数多くのIT関連企業にデジタルプロフェッショナル人材を提供しています。</p>
+      </section>
+
+      <section class="news">
+         <h2>NEWS</h2>
+         <div class="p-news__head">
+            <button class="p-news__caption" id="information-caption" aria-expanded="true" type="button">お知らせ</button>
+            <button class="p-news__caption" id="newrelease-caption" aria-expanded="false" type="button">ニューリリース</button>
+         </div>
+         <div class="flex-wrap-for-IE">
+            <div class="p-news__box">
+               <ul class="p-news__ul" id="information-list" aria-hidden="false">
+                  <li>
+                     <time class="p-news__date" datetime="2020-10-21">2020/10/21</time>
+                     <a href=""><p>年末年始休業日のお知らせ</p></a>
+                  </li>
+                  <li>
+                     <time class="p-news__date" datetime="2020-10-21">2020/10/21</time>
+                     <a href=""><p>年末年始休業日のお知らせ</p></a>
+                  </li>
+                  <li>
+                     <time class="p-news__date" datetime="2020-10-21">2020/10/21</time>
+                     <a href=""><p>年末年始休業日のお知らせ</p></a>
+                  </li>
+                  <li>
+                     <time class="p-news__date" datetime="2020-10-21">2020/10/21</time>
+                     <a href=""><p>年末年始休業日のお知らせ</p></a>
+                  </li>
+                  <li>
+                     <time class="p-news__date" datetime="2020-10-21">2020/10/21</time>
+                     <a href=""><p>年末年始休業日のお知らせ</p></a>
+                  </li>
+               </ul>
+               <ul class="p-news__ul" id="newrelease-list" aria-hidden="true">
+                  <li>
+                     <time class="p-news__date" datetime="2020-10-21">2020/10/21</time>
+                     <a href=""><p>ニューリリース</p></a>
+                  </li>
+                  <li>
+                     <time class="p-news__date" datetime="2020-10-21">2020/10/21</time>
+                     <a href=""><p>ニューリリース</p></a>
+                  </li>
+                  <li>
+                     <time class="p-news__date" datetime="2020-10-21">2020/10/21</time>
+                     <a href=""><p>ニューリリース</p></a>
+                  </li>
+                  <li>
+                     <time class="p-news__date" datetime="2020-10-21">2020/10/21</time>
+                     <a href=""><p>ニューリリース</p></a>
+                  </li>
+                  <li>
+                     <time class="p-news__date" datetime="2020-10-21">2020/10/21</time>
+                     <a href=""><p>ニューリリース</p></a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </section>
+
+      <section class="faq">
+         <h2>FAQ</h2>
+         <ul class="p-faq__ul">
+            <li class="p-faq__li">
+               <div class="p-faq__question" aria-expanded="false">
+                  <div class="p-faq__icon">Q</div>
+                  <p>常駐開始までどれくらいかかりますか？</p>
+                  <div class="p-faq__btn"></div>
+               </div>
+               <div class="p-faq__answer" aria-hidden="true">
+                  <div class="p-faq__icon">A</div>
+                  <p>最短5営業日での常駐開始実績がございます。</p>
+               </div>
+            </li>
+            <li class="p-faq__li">
+               <div class="p-faq__question" aria-expanded="false">
+                  <div class="p-faq__icon">Q</div>
+                  <p>常駐開始までどれくらいかかりますか？</p>
+                  <div class="p-faq__btn"></div>
+               </div>
+               <div class="p-faq__answer" aria-hidden="true">
+                  <div class="p-faq__icon">A</div>
+                  <p>最短5営業日での常駐開始実績がございます。</p>
+               </div>
+            </li>
+            <li class="p-faq__li">
+               <div class="p-faq__question" aria-expanded="false">
+                  <div class="p-faq__icon">Q</div>
+                  <p>常駐開始までどれくらいかかりますか？</p>
+                  <div class="p-faq__btn"></div>
+               </div>
+               <div class="p-faq__answer" aria-hidden="true">
+                  <div class="p-faq__icon">A</div>
+                  <p>最短5営業日での常駐開始実績がございます。</p>
+               </div>
+            </li>
+         </ul>
+      </section>
+
+      <section class="contact">
+         <h2>CONTACT</h2>
+         <button class="p-contact__btn" id="contact-btn" type="button">お問い合わせはこちら</button>
+      </section>
+      
+      <div class="p-form__wrap" id="form-wrap" aria-hidden="true">
+         <form class="p-form" id="form">
+            <div class="p-form__closebtn" id="form-closebtn"></div>
+            <h2 id="form-caption">お問い合わせ</h2>
+            <div class="p-form__section1" id="form-section1" aria-hidden="true">
+               <label for="form-name">お名前</label>
+               <input id="form-name" type="text" placeholder="田中太郎">
+               <label for="form-email">メールアドレス</label>
+               <input id="form-email" type="email" placeholder="sample@example.com">
+               <label for="form-message">お問い合わせ内容</label>
+               <textarea id="form-message" placeholder="お問い合わせ内容をご入力ください。"></textarea>
+               <button class="p-form__submit1" id="form-submit1" type="button">送信する</button>
+            </div>
+            <div class="p-form__section2" id="form-section2" aria-hidden="true">
+               <p>内容を確認いたしまして担当よりご連絡させていただきます</p>
+               <button class="p-form__submit2" id="form-submit2" type="button">閉じる</button>
+            </div>
+         </form>
+      </div>
+
       <footer class="footer">
-         <div class="c-footer__cr">Copyright © Members Co.,Ltd. All rights reserved</div>
+         <div class="p-footer__cr">Copyright © Members Co.,Ltd. All rights reserved</div>
       </footer>
       
       <script src="./assets/scripts/slide_show.js"></script>
+      <script src="./assets/scripts/drawer.js"></script>
+      <script src="./assets/scripts/modal.js"></script>
+      <script src="./assets/scripts/tab_menu.js"></script>
+      <script src="./assets/scripts/hamburger.js"></script>
+      <script src="./assets/scripts/accordion.js"></script>
    </body>
 </html>

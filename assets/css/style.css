@@ -385,7 +385,7 @@
    }
 
    .p-video__wrap {
-      position: fixed;
+      position: absolute;
       top: 0;
       display: flex;
       justify-content: center;

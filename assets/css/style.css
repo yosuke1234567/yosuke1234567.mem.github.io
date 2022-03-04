@@ -50,6 +50,10 @@
       display: flex;
    }
 
+   /* IE10 & IE11 
+   _:-ms-input-placeholder, :root 要素 {}
+   */
+
 /* ==========================================================================
    Layout
    ========================================================================== */
@@ -85,8 +89,8 @@
       z-index: 3;
       top: 0;
       width: 100%;
-      height: 100vh;
-      transition: all .3s;
+      height: 100%;
+      transition: opacity .3s, visibility .3s;
    }
 
    .video[aria-hidden="true"] {
@@ -335,6 +339,9 @@
 
    .p-video__inner {
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 1000px;
       max-width: 90%;
       height: 100%;
@@ -343,9 +350,6 @@
    }
 
    .p-video__p {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
       color: #fff;
       font-size: 28px;
       font-weight: bold;
@@ -381,6 +385,19 @@
    }
 
    .p-video__wrap {
+      position: fixed;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+   }
+
+   .p-video__wrap::before {
+      content: '';
+      display: block;
       position: absolute;
       top: 0;
       background-color: rgba(0, 0, 0, .4);
@@ -389,21 +406,20 @@
    }
 
    .p-video__wrap > video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
+      min-height: 100%;
       z-index: -1;
+   }
+
+   /*アスペクト比が16:9より横に大きいとき*/
+   @media (min-aspect-ratio: 16/9) {
+      .p-video__wrap > video {
+         width: 100%;
+      }
    }
 
    @media screen and (max-width: 1024px) {
       .p-video__p {
          font-size: 24px;
-      }
-
-      .p-video__wrap {
-         width: 120%;
       }
    }
 
@@ -416,11 +432,6 @@
 
       .p-video__p > br {
          display: none;
-      }
-
-      .p-video__wrap > video {
-         height: 100%;
-         width: auto;
       }
 
       .p-video__btn {
@@ -445,7 +456,6 @@
       height: 550px;
       width: 100%;
       background-color: rgba(0, 0, 0, .4);
-      overflow: hidden;
    }
 
    .p-slide__p {
@@ -459,34 +469,33 @@
 
    .p-slide__ul {
       position: absolute;
-      top: 0;
       left: 0;
-      display: flex;
-      align-items: center;
+      top: 0;
       height: 100%;
       width: 100%;
       z-index: -1;
-      background-color: rgba(0, 0, 0, .4);
+      overflow: hidden;
    }
 
    .p-slide__li {
       position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
       height: 100%;
       opacity: 1;
-      transition: opacity 1s;
+      transition: opacity 1s, visibility 1s;
    }
 
    .p-slide__li[aria-hidden="true"] {
+      visibility: hidden;
       opacity: 0;
+      transition: opacity 1s, visibility 1s;
    }
 
    .p-slide__li > img {
-      position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      display: block;
-      width: 100%;
+      min-height: 100%;
    }
 
    .p-slide__selector {
@@ -510,14 +519,21 @@
    .p-slide__btn[aria-expanded="true"] {
       background-color: #d7003a;
    }
+   
+   /*アスペクト比が16:9より横に大きいとき*/
+   @media (min-aspect-ratio: 16/9) {
+      .p-slide__li > img {
+         width: 100%;
+      }
+   }
 
    @media screen and (max-width: 1024px) {
       .p-slide__p {
          font-size: 24px;
       }
 
-      .p-slide__li {
-         width: 120%;
+      .p-slide__li > img {
+         max-height: 200%;
       }
    }
    
@@ -531,16 +547,10 @@
       .p-slide__p > br {
          display: none;
       }
-
+      
       .p-slide__li > img {
-         height: 100%;
-         width: auto;
+         height: 125%;
       }
-   }
-
-   /* IE10 & IE11 */
-   _:-ms-input-placeholder, :root .p-slide__ul {
-      top: -275px;
    }
    
    /**
